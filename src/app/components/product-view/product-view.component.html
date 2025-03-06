@@ -1,0 +1,22 @@
+<div class="container my-5">
+    <h2>Detalles del Usuario</h2>
+    <hr />
+  
+ 
+    @if (product) {
+    <div>
+        <p><strong>Name:</strong> {{ product.name }}</p>
+        <p><strong>description:</strong> {{ product.description }}</p>
+        <p><strong>Precio:</strong> {{ product.price}}</p>
+        <p><strong>Categoria:</strong> {{ product.category }}</p>
+        <p><strong>Imagen:</strong> <img [src]="product.image" alt="Imagen del producto" width="100" /></p>
+  
+     
+    <div class="mt-4">
+        <button class="btn btn-secondary me-2" (click)="volverAlaLista()">Volver al Listado</button>
+        </div>
+    </div>
+    } @else {
+    <p class="text-muted">No se encontraron detalles del producto.</p>
+    }
+  </div>    
